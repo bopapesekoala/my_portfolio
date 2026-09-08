@@ -275,52 +275,7 @@
 
     </div>
     <script src='https://unpkg.com/aos@2.3.1/dist/aos.js'></script>
-    <script>
-        // Initialize AOS Animation Library
-        AOS.init({
-            duration: 800, // Animation duration
-            once: true // Only animate once
-        });
-
-        // Dark Mode Toggle
-        const darkModeToggle = document.getElementById('dark-mode-toggle');
-        const body = document.body;
-
-        // Check for saved preference
-        if (localStorage.getItem('darkMode') === 'enabled') {
-            body.classList.add('dark-mode');
-        }
-
-        darkModeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            // Save preference
-            if (body.classList.contains('dark-mode')) {
-                localStorage.setItem('darkMode', 'enabled');
-            } else {
-                localStorage.removeItem('darkMode');
-            }
-        });
-
-        // Mobile Menu Toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const mainNav = document.getElementById('main-nav');
-
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            mainNav.classList.toggle('active');
-        });
-
-        // Simple FAQ Accordion Toggle (Add '.active' class to faq-item)
-        const faqItems = document.querySelectorAll('.faq-item');
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-question');
-            if (question) {
-                question.addEventListener('click', () => {
-                    item.classList.toggle('active');
-                });
-            }
-        });
-    </script>
+    
 
 </body>
 
